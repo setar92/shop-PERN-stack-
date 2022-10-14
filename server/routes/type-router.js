@@ -6,6 +6,6 @@ const typeRouter = Router();
 
 typeRouter.post('/', create);
 typeRouter.get('/', getAll);
-typeRouter.delete('/:id', deleteById);
+typeRouter.delete('/', deleteById);
 
 export { typeRouter };

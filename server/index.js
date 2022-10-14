@@ -5,13 +5,22 @@ import { User, Basket, BasketDevice, Rating, Type, Brand, Device, DaviceInfo } f
 import cors from 'cors';
 dotenv.config();
 import { router } from './routes/index.js';
+import { errorHandler } from './middelware/error-handling.js';
+import fileUpload from 'express-fileupload';
+import path from 'path';
+const __dirname = path.resolve();
+
 
 const PORT = process.env.PORT || 5000;
 
 const app = express();
 app.use(cors());
 app.use(express.json());
+app.use(express.static(path.resolve(__dirname, 'static')));
+app.use(fileUpload({}));
 app.use('/api', router);
+
+app.use(errorHandler);
 
 
 const start = async () => {
