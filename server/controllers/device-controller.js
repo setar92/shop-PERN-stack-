@@ -1,4 +1,3 @@
-import { Type } from '../models/models.js';
 import { Device, DaviceInfo } from '../models/models.js';
 import { ApiError } from '../error/api-error.js';
 import { v4 } from 'uuid';
