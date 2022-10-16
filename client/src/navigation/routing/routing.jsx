@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 
 import { AdminPanel } from '../../pages/admin-panel';
 import { AuthPage } from '../../pages/auth';
@@ -12,14 +12,12 @@ import { routes, roles } from '../../common/constants';
 import { ProtectedRoute } from '../protected-route/protected-route';
 import { Contex } from '../../index';
 
-
 const Routing = () => {
   const { user } = useContext(Contex)
   const isAuth = user.isAuth;
   const role = roles.ADMIN;
 
   return (
-    <BrowserRouter>
       <Routes>
         <Route
           element={
@@ -41,7 +39,6 @@ const Routing = () => {
         <Route path={routes.REGISTRATION} element={<AuthPage />}></Route>
         <Route path={'*'} element={<ShopPage />}></Route>
       </Routes>
-    </BrowserRouter>
   );
 };
 

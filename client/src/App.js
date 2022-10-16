@@ -1,8 +1,13 @@
 import { Routing } from './navigation/routing/routing';
+import { NavBar } from './components/NavBar/NavBar';
+import { BrowserRouter} from 'react-router-dom';
 
 function App() {
   return (
-    <Routing />
+    <BrowserRouter>
+      <NavBar />
+      <Routing />
+    </BrowserRouter>
   );
 }
 
