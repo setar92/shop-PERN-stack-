@@ -1,5 +1,5 @@
 import { Routing } from './navigation/routing/routing';
-import { NavBar } from './components/NavBar/NavBar';
+import { NavBar } from './components/nav-bar/nav-bar';
 import { BrowserRouter} from 'react-router-dom';
 
 function App() {

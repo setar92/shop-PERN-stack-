@@ -1,0 +1,9 @@
+.brand {
+  cursor: pointer;
+  width: auto;
+}
+
+.active {
+  background-color: #0d6efd;
+  color: white;
+}
